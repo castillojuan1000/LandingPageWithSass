@@ -11,16 +11,18 @@
 
     &:hover{
         transform: scale(.98);
+        @include set-background-text($secondary-color)
     }
 }
 
 //this is how to use the property
 .btn-primary{
     @extend %btn;
-    background-color: lighten($color: $primary-color, $amount: 20%);
+    background-color: lighten($primary-color, 20%);
+    @include set-background-text(lighten($primary-color, 20%))
 }
 
 .btn-secondary{
     @extend %btn;
-    background-color: lighten($color: $primary-color, $amount: 20%);
+    @include set-background-text(lighten($primary-color, 20%))
 }
